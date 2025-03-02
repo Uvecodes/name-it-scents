@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogue - NameIt Scents & Clothing</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="brand-name">NameIt</a>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="catalogue.html" class="nav-link active">Catalogue</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link cart-icon" id="cartToggle">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="hero-bg">
+            <img src="./assets/collections-banner.jpg" alt="Catalogue Hero">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Our Collections</h1>
+            <p class="hero-text">Discover our curated selection of premium perfumes and designer clothing</p>
+        </div>
+    </section>
+
+    <!-- Brand Filter -->
+    <section class="brand-filter">
+        <div class="container">
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All Brands</button>
+                <button class="filter-btn" data-filter="gucci">Gucci</button>
+                <button class="filter-btn" data-filter="dior">Dior</button>
+                <button class="filter-btn" data-filter="chanel">Chanel</button>
+                <button class="filter-btn" data-filter="versace">Versace</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalogue Section -->
+    <section class="catalogue-section">
+        <div class="container">
+            <!-- Gucci Section -->
+            <div class="brand-section" id="gucci">
+                <h2 class="brand-title">Gucci Collection</h2>
+                <div class="row">
+                    <!-- Perfume Card -->
+                    <div class="col-4">
+                        <div class="product-card">
+                            <div class="product-badge">Perfume</div>
+                            <img src="images/gucci-perfume-1.jpg" alt="Gucci Bloom">
+                            <div class="product-info">
+                                <h3>Gucci Bloom</h3>
+                                <p class="product-description">A floral fragrance that unfolds like a garden of dreams</p>
+                                <p class="product-price">$120.00</p>
+                                <button class="btn btn-primary">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Clothing Card -->
+                    <div class="col-4">
+                        <div class="product-card">
+                            <div class="product-badge">Clothing</div>
+                            <img src="images/gucci-clothing-1.jpg" alt="Gucci T-Shirt">
+                            <div class="product-info">
+                                <h3>Gucci Logo T-Shirt</h3>
+                                <p class="product-description">Classic cotton t-shirt with iconic Gucci logo</p>
+                                <p class="product-price">$450.00</p>
+                                <button class="btn btn-primary">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dior Section -->
+            <div class="brand-section" id="dior">
+                <h2 class="brand-title">Dior Collection</h2>
+                <div class="row">
+                    <!-- Perfume Card -->
+                    <div class="col-4">
+                        <div class="product-card">
+                            <div class="product-badge">Perfume</div>
+                            <img src="images/dior-perfume-1.jpg" alt="Sauvage">
+                            <div class="product-info">
+                                <h3>Dior Sauvage</h3>
+                                <p class="product-description">A powerful fresh spicy fragrance</p>
+                                <p class="product-price">$150.00</p>
+                                <button class="btn btn-primary">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Clothing Card -->
+                    <div class="col-4">
+                        <div class="product-card">
+                            <div class="product-badge">Clothing</div>
+                            <img src="images/dior-clothing-1.jpg" alt="Dior Dress">
+                            <div class="product-info">
+                                <h3>Dior Summer Dress</h3>
+                                <p class="product-description">Elegant summer dress with signature Dior pattern</p>
+                                <p class="product-price">$2,100.00</p>
+                                <button class="btn btn-primary">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chanel Section -->
+            <div class="brand-section" id="chanel">
+                <h2 class="brand-title">Chanel Collection</h2>
+                <div class="row">
+                    <!-- Perfume Card -->
+                    <div class="col-4">
+                        <div class="product-card">
+                            <div class="product-badge">Perfume</div>
+                            <img src="images/chanel-perfume-1.jpg" alt="Chanel No 5">
+                            <div class="product-info">
+                                <h3>Chanel N°5</h3>
+                                <p class="product-description">The iconic fragrance that revolutionized the world of perfume</p>
+                                <p class="product-price">$135.00</p>
+                                <button class="btn btn-primary">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Clothing Card -->
+                    <div class="col-4">
+                        <div class="product-card">
+                            <div class="product-badge">Clothing</div>
+                            <img src="images/chanel-clothing-1.jpg" alt="Chanel Jacket">
+                            <div class="product-info">
+                                <h3>Chanel Tweed Jacket</h3>
+                                <p class="product-description">Classic tweed jacket with pearl buttons</p>
+                                <p class="product-price">$4,500.00</p>
+                                <button class="btn btn-primary">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Versace Section -->
+            <div class="brand-section" id="versace">
+                <h2 class="brand-title">Versace Collection</h2>
+                <div class="row">
+                    <!-- Perfume Card -->
+                    <div class="col-4">
+                        <div class="product-card">
+                            <div class="product-badge">Perfume</div>
+                            <img src="images/versace-perfume-1.jpg" alt="Versace Eros">
+                            <div class="product-info">
+                                <h3>Versace Eros</h3>
+                                <p class="product-description">A fresh, woody, and oriental composition</p>
+                                <p class="product-price">$95.00</p>
+                                <button class="btn btn-primary">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Clothing Card -->
+                    <div class="col-4">
+                        <div class="product-card">
+                            <div class="product-badge">Clothing</div>
+                            <img src="images/versace-clothing-1.jpg" alt="Versace Shirt">
+                            <div class="product-info">
+                                <h3>Versace Silk Shirt</h3>
+                                <p class="product-description">Baroque print silk shirt with signature Medusa details</p>
+                                <p class="product-price">$995.00</p>
+                                <button class="btn btn-primary">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <h3 class="footer-title">About NameIt</h3>
+                    <p>Your premier destination for luxury perfumes and designer clothing.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="catalogue.html" class="footer-link">Catalogue</a></li>
+                        <li><a href="about.html" class="footer-link">About</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-4">
+                    <h3 class="footer-title">Newsletter</h3>
+                    <p>Subscribe to get special offers and updates.</p>
+                    <form class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Enter your email">
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 NameIt. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/catalogue.js"></script>
+</body>
+</html> 
