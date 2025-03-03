@@ -388,4 +388,44 @@ document.addEventListener('DOMContentLoaded', () => {
     validateForm('signupForm');
     validateForm('contactForm');
     initPasswordToggles();
-}); 
+});
+
+// Team Carousel
+const teamCarouselRow = document.querySelector('.team-row');
+const teamPrevBtn = document.querySelector('.prev-btn');
+const teamNextBtn = document.querySelector('.next-btn');
+const teamDots = document.querySelectorAll('.team-dot');
+let teamCurrentSlide = 0;
+
+function updateTeamCarousel() {
+    const slideWidth = 100 / 3;
+    teamCarouselRow.style.transform = `translateX(-${teamCurrentSlide * slideWidth}%)`;
+    
+    // Update dots
+    teamDots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === teamCurrentSlide);
+    });
+}
+
+teamPrevBtn.addEventListener('click', () => {
+    teamCurrentSlide = (teamCurrentSlide - 1 + 3) % 3;
+    updateTeamCarousel();
+});
+
+teamNextBtn.addEventListener('click', () => {
+    teamCurrentSlide = (teamCurrentSlide + 1) % 3;
+    updateTeamCarousel();
+});
+
+teamDots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        teamCurrentSlide = index;
+        updateTeamCarousel();
+    });
+});
+
+// Auto slide every 5 seconds
+setInterval(() => {
+    teamCurrentSlide = (teamCurrentSlide + 1) % 3;
+    updateTeamCarousel();
+}, 5000); 

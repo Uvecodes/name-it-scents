@@ -1074,6 +1074,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .about-content {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
 }
 
 .about-content h2 {
@@ -1139,13 +1143,28 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--gray);
 }
 
-/* Team Section */
+/* Team Section with Carousel */
 .team-section {
     padding: 80px 0;
     background-color: var(--light-color);
+    overflow: hidden;
+}
+
+.team-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.team-row {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 30px;
 }
 
 .team-card {
+    flex: 0 0 calc(33.333% - 20px);
     background: var(--white);
     border-radius: 10px;
     overflow: hidden;
@@ -1194,14 +1213,77 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
-/* Responsive Styles for Team Section */
+.team-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.team-nav-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--white);
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.team-nav-btn:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.team-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.team-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--gray-light);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.team-dot.active {
+    background: var(--primary-color);
+}
+
+/* Responsive Styles */
 @media (max-width: 992px) {
+    .team-card {
+        flex: 0 0 calc(50% - 15px);
+    }
+    
     .team-image {
         height: 280px;
     }
 }
 
 @media (max-width: 768px) {
+    .about-content {
+        padding: 0 15px;
+        margin-bottom: 30px;
+    }
+    
+    .about-image {
+        height: 300px;
+    }
+    
+    .team-card {
+        flex: 0 0 calc(100% - 30px);
+    }
+    
     .team-image {
         height: 250px;
     }
@@ -1216,6 +1298,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 576px) {
+    .about-content h2 {
+        font-size: 2rem;
+    }
+    
+    .about-image {
+        height: 250px;
+    }
+    
     .team-image {
         height: 220px;
     }
