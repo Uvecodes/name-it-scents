@@ -221,6 +221,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-section .btn {
     opacity: 1;
     transition: all 0.3s ease;
+    margin: top 10rem;
 }
 
 /* Hero Section hover animations */
@@ -648,6 +649,15 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .newsletter-form {
+        flex-direction: column;
+    }
+
+    .col-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .row {
         flex-direction: column;
     }
 }
@@ -1145,7 +1155,6 @@ h1, h2, h3, h4, h5, h6 {
         padding: 0 15px;
         margin-bottom: 30px;
         text-align: center;
-        order: 2;
     }
     
     .about-content h2 {
@@ -1166,8 +1175,7 @@ h1, h2, h3, h4, h5, h6 {
     
     .about-image {
         height: 350px;
-        order: 1;
-        margin-bottom: 30px;
+        margin-top: 30px;
     }
 }
 
@@ -1179,15 +1187,20 @@ h1, h2, h3, h4, h5, h6 {
     .about-content {
         padding: 0 15px;
         margin-bottom: 25px;
+        order: 1;
     }
     
     .about-content h2 {
         font-size: 2rem;
     }
     
+    .about-image-container {
+        order: 2;
+    }
+    
     .about-image {
         height: 300px;
-        margin-bottom: 25px;
+        margin-top: 25px;
     }
 }
 
@@ -1214,7 +1227,7 @@ h1, h2, h3, h4, h5, h6 {
     
     .about-image {
         height: 250px;
-        margin-bottom: 20px;
+        margin-top: 20px;
     }
 }
 
@@ -1253,190 +1266,6 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1rem;
     line-height: 1.6;
     color: var(--gray);
-}
-
-/* Team Section with Carousel */
-.team-section {
-    padding: 80px 0;
-    background-color: var(--light-color);
-    overflow: hidden;
-}
-
-.team-carousel {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    padding: 20px 0;
-}
-
-.team-row {
-    display: flex;
-    transition: transform 0.5s ease;
-    gap: 30px;
-}
-
-.team-card {
-    flex: 0 0 calc(33.333% - 20px);
-    background: var(--white);
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.team-image {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-    display: block;
-}
-
-.team-card:hover .team-image {
-    transform: scale(1.05);
-}
-
-.team-content {
-    padding: 1.5rem;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.team-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: var(--dark-color);
-}
-
-.team-role {
-    font-size: 1rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-.team-bio {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: var(--gray);
-    margin: 0;
-}
-
-.team-nav {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 2rem;
-}
-
-.team-nav-btn {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: var(--white);
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.team-nav-btn:hover {
-    background: var(--primary-color);
-    color: var(--white);
-}
-
-.team-dots {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-    margin-top: 1rem;
-}
-
-.team-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: var(--gray-light);
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.team-dot.active {
-    background: var(--primary-color);
-}
-
-/* Responsive Styles */
-@media (max-width: 992px) {
-    .team-card {
-        flex: 0 0 calc(50% - 15px);
-    }
-    
-    .team-image {
-        height: 280px;
-    }
-}
-
-@media (max-width: 768px) {
-    .about-content {
-        padding: 0 15px;
-        margin-bottom: 30px;
-    }
-    
-    .about-image {
-        height: 300px;
-    }
-    
-    .team-card {
-        flex: 0 0 calc(100% - 30px);
-    }
-    
-    .team-image {
-        height: 250px;
-    }
-    
-    .team-content {
-        padding: 1.25rem;
-    }
-    
-    .team-card h3 {
-        font-size: 1.3rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .about-content h2 {
-        font-size: 2rem;
-    }
-    
-    .about-image {
-        height: 250px;
-    }
-    
-    .team-image {
-        height: 220px;
-    }
-    
-    .team-content {
-        padding: 1rem;
-    }
-    
-    .team-card h3 {
-        font-size: 1.2rem;
-    }
-    
-    .team-role {
-        font-size: 0.9rem;
-    }
-    
-    .team-bio {
-        font-size: 0.9rem;
-    }
 }
 
 /* Cart Icon Fix */
